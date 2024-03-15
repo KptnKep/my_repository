@@ -102,7 +102,7 @@ def customcards_on_open(hashMap, _files=None, _data=None):
                     "mask": "",
                     "Variable": "",
                     "TextSize": "-1",
-                    "TextColor": "#6F9393",
+                    "TextColor": "#DB7093",
                     "TextBold": False,
                     "TextItalic": True,
                     "BackgroundColor": "",
