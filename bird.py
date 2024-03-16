@@ -4,6 +4,10 @@ import time
 import base64
 
 def customcards_on_open(hashMap, _files=None, _data=None):
+    if not hashMap.containsKey("cards"):
+        hashMap.put("toast",str((hashMap.get("no_cards")))
+    
+   
     j = { "customcards":         {
             
             "layout": {
@@ -138,18 +142,18 @@ def customcards_on_open(hashMap, _files=None, _data=None):
     }
     }
    
-    j["customcards"]["cardsdata"]=[]
-    for i in range(0,5):
-        c =  {
-        "key": str(i),
-        "descr": "Pos. "+str(i),
-        "val": str(random.randint(10, 10000))+" руб.",
-        "string1": "Материнская плата ASUS ROG MAXIMUS Z690 APEX",
-        "string2": "Гнездо процессора LGA 1700",
-        "string3": "Частотная спецификация памяти 4800 МГц"
-      }
-        j["customcards"]["cardsdata"].append(c)
+    # j["customcards"]["cardsdata"]=[]
+    # for i in range(0,5):
+    #     c =  {
+    #     "key": str(i),
+    #     "descr": "Pos. "+str(i),
+    #     "val": str(random.randint(10, 10000))+" руб.",
+    #     "string1": "Материнская плата ASUS ROG MAXIMUS Z690 APEX",
+    #     "string2": "Гнездо процессора LGA 1700",
+    #     "string3": "Частотная спецификация памяти 4800 МГц"
+    #   }
+    #     j["customcards"]["cardsdata"].append(c)
 
-    hashMap.put("cards",json.dumps(j,ensure_ascii=False).encode('utf8').decode())
+    # hashMap.put("cards",json.dumps(j,ensure_ascii=False).encode('utf8').decode())
 
     return hashMap
