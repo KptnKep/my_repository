@@ -2,7 +2,9 @@ import json
 import random
 import time
 import base64
-
+def new_window_on_open(hashMap, _files=None, _data=None):
+    hashMap.put("ShowScreen","Экран добавления новой птицы")
+    return hashMap
 def customcards_on_open(hashMap, _files=None, _data=None):
        
     j = { "customcards":         {
