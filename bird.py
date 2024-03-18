@@ -136,28 +136,29 @@ def customcards_on_open(hashMap, _files=None, _data=None):
                 "weight": 0
             }
             ]
-        }
-
-    }, "cardsdata": [
+        },
+        "cardsdata": [
         {
         "key": str(1),
         "descr": "Pos. "+str(1),
-        "name": "Воробей",
-        "colour":"Серый"},
+        "string1": "Воробей",
+        "string2":"Серый"},
         {"key": str(2),
         "descr": "Pos. "+str(2),
-        "name": "Сорока",
-        "colour":"черно-белый"},
+        "string1": "Сорока",
+        "string2":"черно-белый"},
         {"key": str(3),
         "descr": "Pos. "+str(3),
-        "name": "Ворона",
-        "colour":"Серый"},
+        "string1": "Ворона",
+        "string2":"Серый"},
         {"key": str(4),
         "descr": "Pos. "+str(4),
-        "name": "Воробей",
-        "colour":"Серый"},
+        "string1": "Воробей",
+        "string2":"Серый"}
         
     ]
+
+    }
     }
    
     # j["customcards"]["cardsdata"]=[]
