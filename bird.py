@@ -138,20 +138,39 @@ def customcards_on_open(hashMap, _files=None, _data=None):
             ]
         }
 
-    }
+    }, "cardsdata": [
+        {
+        "key": str(1),
+        "descr": "Pos. "+str(1),
+        "name": "Воробей",
+        "colour":"Серый"},
+        {"key": str(2),
+        "descr": "Pos. "+str(2),
+        "name": "Сорока",
+        "colour":"черно-белый"},
+        {"key": str(3),
+        "descr": "Pos. "+str(3),
+        "name": "Ворона",
+        "colour":"Серый"},
+        {"key": str(4),
+        "descr": "Pos. "+str(4),
+        "name": "Воробей",
+        "colour":"Серый"},
+        
+    ]
     }
    
-    j["customcards"]["cardsdata"]=[]
-    for i in range(0,5):
-        c =  {
-        "key": str(i),
-        "descr": "Pos. "+str(i),
-        "val": str(random.randint(10, 10000))+" руб.",
-        "string1": "Материнская плата ASUS ROG MAXIMUS Z690 APEX",
-        "string2": "Гнездо процессора LGA 1700",
-        "string3": "Частотная спецификация памяти 4800 МГц"
-      }
-        j["customcards"]["cardsdata"].append(c)
+    # j["customcards"]["cardsdata"]=[]
+    # for i in range(0,5):
+    #     c =  {
+    #     "key": str(i),
+    #     "descr": "Pos. "+str(i),
+    #     "val": str(random.randint(10, 10000))+" руб.",
+    #     "string1": "Материнская плата ASUS ROG MAXIMUS Z690 APEX",
+    #     "string2": "Гнездо процессора LGA 1700",
+    #     "string3": "Частотная спецификация памяти 4800 МГц"
+    #   }
+    #     j["customcards"]["cardsdata"].append(c)
     
 
     hashMap.put("cards",json.dumps(j,ensure_ascii=False).encode('utf8').decode())
