@@ -196,8 +196,8 @@ def save_bird(hashMap, _files=None, _data=None):
     data = {
         "key": str(i),
         "descr": "Pos. "+str(i),
-        "string1": (hashMap.get("bird"),
-        "string2": (hashMap.get("bloom")
+        "string1": hashMap.get("bird"),
+        "string2": hashMap.get("bloom")
     }
     
     c.append(data)
