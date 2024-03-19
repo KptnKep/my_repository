@@ -199,7 +199,7 @@ def save_bird(hashMap, _files=None, _data=None):
         "string1": (hashMap.get("bird"),
         "string2": (hashMap.get("bloom")
     }
-    global c
-    c["cardsdata"].append(data)
+    
+    c.append(data)
 
     return hashMap
