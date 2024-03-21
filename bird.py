@@ -203,5 +203,6 @@ def save_bird(hashMap, _files=None, _data=None):
                     }
     
                     c.append(data)
+                    hashMap.put("toast", "Добавленно" )
 
     return hashMap
