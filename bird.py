@@ -187,20 +187,21 @@ def customcards_on_open(hashMap, _files=None, _data=None):
 
 
 def save_bird(hashMap, _files=None, _data=None):
-    if not hashMap.containsKey("bird"):
-        hashMap.put("toast", "Введите название птицы")
-    if not hashMap.containsKey("bloom"):
-        hashMap.put("toast", "Введите цвет птицы")
-
-    i = len(c) + 1
-    data = {
-        "key": str(i),
-        "descr": "Pos. "+str(i),
-        "string1": hashMap.get("bird"),
-        "string2": hashMap.get("bloom")
-    }
+    if hashMap.get("bird").isalpha() and len(hashMap.get("bird")) > 3 and hashMap.get("bloom").isalpha() and len(hashMap.get("bloom")) > 3:
+        for data in c:
+            for string1, string2 in data.items():
+                if string1.lower() == hashMap.get("bird").lower() and string2.lower() == hashMap.get("bloom").lower():
+                    hashMap.put("toast", "Такая птица есть в базе")
+                else:
     
-    c.append(data)
-    hashMap.put("toast", "Добавленно" )
+                    i = len(c) + 1
+                    data = {
+                        "key": str(i),
+                        "descr": "Pos. " + str(i),
+                        "string1": hashMap.get("bird"),
+                        "string2": hashMap.get("bloom")
+                    }
+    
+                    c.append(data)
 
     return hashMap
